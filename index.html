@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Centered Task App</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+
+  <div class="task-box">
+    <input type="text" id="taskInput" placeholder="New Task" />
+    <button id="addTask">Add Task</button>
+    <button id="undoTask">Undo Task</button>
+    <ul id="taskList"></ul>
+  </div>
+
+  <script>
+    
+    function setVh() {
+      let vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty('--vh', `${vh}px`);
+    }
+
+    setVh();
+    window.addEventListener('resize', setVh);
+
+   
+  </script>
+
+  <script src="index.js"></script>
+
+</body>
+</html>
